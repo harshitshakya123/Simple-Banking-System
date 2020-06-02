@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Registration form</title>
+	<link rel="stylesheet"  href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+<body>
+      <div class="hero">
+      	<div class="form-box">
+      		<div class="button-box">
+      			<div id="btn"></div>
+      		    <button type="button" class="toggle-btn" onclick="login()">Login</button>
+      		    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+      		</div>    
+      		 <div class="social-icons">
+      		 	<img src="fb.png">
+      		 	<img src="tw.png">
+      		 	<img src="gp.png">
+      		 </div>   
+    
+     
+      
+<form id="login" action="Login" class="input-group-login" method="post" onsubmit="return validation()" style="left: 50px;">
+	<input type="text" name="loginid" id="login" class="input-field" placeholder="Login id" >
+	<input type="password" name="password" id="pass" class="input-field" placeholder="Enter password" >
+	<input type="checkbox" class="chech-box-login" ><span>Remember password</span>
+	<button type="submit"   class="submit-btn-login">Log in</button>
+</form>      
+
+<form id="register" action="Register" class="input-group-register" method="post" style="left: 450px;">
+	
+	<div class="scroll">
+			<span>Register</span>	
+			<input type="text" name="n1" class="input-field" placeholder="Bank name" required>
+			<input type="text" name="n2" class="input-field" placeholder="Type of account" required>
+			<span>User detail</span>
+			<input type="text" name="n3" class="input-field" placeholder="First name" required>
+			<input type="text" name="n4" class="input-field" placeholder="Last name" required>
+			<input type="text" name="n5" class="input-field" placeholder="Login id" required>
+			<input type="password" name="n6" class="input-field" placeholder="Password" required>
+			<input type="password" name="n7" class="input-field" placeholder="Confirm password" required>
+			<input type="email" name="n8" class="input-field" placeholder="Email id" required>
+			<span>Personal Detail</span>
+			<input type="text" name="n9" class="input-field" placeholder="Date of birth" required>
+			<input type="text" name="n10" class="input-field" placeholder="Mobile no." required>
+			<input type="text" name="n11" class="input-field" placeholder="Gender" required>
+			<input type="text" name="n12" class="input-field" placeholder="Nationality" required>
+			<input type="checkbox" class="chech-box-registers" required><span>I agree to the term & condition</span>
+			<button type="submit" class="submit-btn-register">Register</button><br>	      
+		    <button type="reset" value="clear"  class="submit-btn-register">Reset</button>
+    </div>
+</form>
+</div>
+</div>
+      <script>
+      	var x=document.getElementById("login"); 
+      	var y=document.getElementById("register");
+      	var z=document.getElementById("btn");
+
+      	function register() {
+      		x.style.left="-400px";
+      	    y.style.left="50px";
+      		z.style.left="110px";
+      	}
+
+      	function login() {
+      		x.style.left="50px";
+      	    y.style.left="450px";
+      		z.style.left="0";
+      	}
+      	//me is problem ko html pr hi solve krna chahta hu
+      	function validation(){
+      	var log=document.getElementById("login").value;
+      	var pas=document.getElementById("pass").value;
+      	if(log == "")
+      	{
+      	document.getElementById("showusererror").innerHTML="*Please fill LoginId*";
+      	return false;
+      	}
+      	
+      	if(pas == "")
+      	{
+      	document.getElementById("showusererror").innerHTML="*Please fill Password*";
+      	return false;
+      	}
+      	
+      	}
+		
+     
+      </script>
+</body>
+</html>

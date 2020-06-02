@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Transaction form</title>
+		<link rel="stylesheet"  href="transaction.css">
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	</head>
+	<body>
+		<div class="hero">
+			<div class="form-box">
+				<div class="button-box">
+					<div id="btn"></div>
+					<button type="button" class="toggle-btn" onclick="deposit()">Deposit</button>
+					<button type="button" class="toggle-btn" onclick="withdrawl()">Withdrawl</button>
+					<button type="button" class="toggle-btn" onclick="balance_enquiry()">Balance_enquiry</button>
+				</div>
+				
+				<form id="deposit"  action="Deposit" method="post" class="input-group-deposit" style="left: 50px;">
+					<input type="text" name="depositammount" class="input-field" placeholder="Enter ammount you want to deposit" required>
+					<button  type="submit" onclick="showdepoicon()" class="submit-btn-deposit">Deposit</button>
+					<!-- <button type="submit" formtarget="tansaction.html" class="submit-btn-deposit">Back</button>	
+ -->			    <a type="submit" href="Logoutservlet" class="submit-btn-deposit">Log Out</a>	
+               </form>
+				<form id="withdrawl" action="Withdrawl"  method="post" class="input-group-withdrawl" style="left: 450px;">
+					<input type="text"  name="withdrawl" class="input-field" placeholder="PLEASE ENTER YOUR AMOUNT" required>
+					<button type="submit" onclick="showwithicon()" class="submit-btn-withdrawl">WITHDRAWL</button><br>
+					<!--  <button type="submit"  href="transaction.html" class="submit-btn-withdrawl">BACK</button>
+					-->
+					<a type="submit"  href="Logoutservlet" class="submit-btn-withdrawl">Log Out</a>
+				</form>
+				
+				<form id="balance_enquiry" action="Balance_enquiry" method="post" class="input-group-balance_enquiry" style="left: 850px;">
+     			<h2 align="center">Please enter button</h2>
+             	<button type="submit" class="submit-btn-balance_enquiry">Submit</button>
+				</form>
+			</div>
+		</div>
+		<script>
+		
+		var y=document.getElementById("deposit");
+		var x=document.getElementById("withdrawl");
+		var w=document.getElementById("balance_enquiry");
+		var b=document.getElementById("btn");
+		function deposit() {
+		x.style.left="-400px";
+		y.style.left="50px";
+		w.style.left="420px";
+		b.style.left="110px";
+		}
+		function withdrawl() {
+		x.style.left="50px";
+		y.style.left="450px";
+		w.style.left="840px";
+		b.style.left="0";
+		}
+		function balance_enquiry() {
+		x.style.left="400px";
+		y.style.left="850px";
+		w.style.left="70px";
+		b.style.left="220px";
+		}
+			function showdepoicon(){
+				Swal.fire({
+				position: 'center',
+				icon: 'success',
+				title: "Deposit Successfully...!!",
+				showConfirmButton: false,
+				timer: 1500
+				})
+			}
+			
+			function showwithicon(){
+				Swal.fire({
+				position: 'center',
+				icon: 'success',
+				title: "Withdraw Successfully...!!",
+				showConfirmButton: false,
+				timer: 1500
+				
+				})
+			}
+			
+		</script>
+	</body>
+</html>

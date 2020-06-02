@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Banksystem_project</display-name>
+  
+    <servlet>
+  <servlet-name>abc</servlet-name>
+  <servlet-class>Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>abc</servlet-name>
+  <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+  
+ 
+  
+      <servlet>
+  <servlet-name>xyz</servlet-name>
+  <servlet-class>Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>xyz</servlet-name>
+  <url-pattern>/welcome1</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+  <servlet-name>qwe</servlet-name>
+  <servlet-class>Deposit</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>qwe</servlet-name>
+  <url-pattern>/welcome2</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>with</servlet-name>
+  <servlet-class>Withdrawl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>with</servlet-name>
+  <url-pattern>/welcome3</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>balance</servlet-name>
+  <servlet-class>Balance_enquiry</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>balance</servlet-name>
+  <url-pattern>/welcome4</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
